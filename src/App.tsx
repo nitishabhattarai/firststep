@@ -1,9 +1,16 @@
 import React, { Component } from "react";
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
 class App extends Component {
   render() {
-    return <div className="text-green-700 App">First Step</div>;
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    );
   }
 }
 
